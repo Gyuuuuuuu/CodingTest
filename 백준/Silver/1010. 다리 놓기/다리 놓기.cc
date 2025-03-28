@@ -6,9 +6,7 @@ int main() { // 이항 계수 계산 (nCm)
     cin >> test_case;
 
     for (int tc = 0; tc < test_case; ++tc) {
-        cin >> m >> n;
-
-        if (m > n - m) m = n - m; // 대칭성 활용 (C(n, m) == C(n, n-m))
+        cin >> m >> n;        
 
         long long result = 1;
         for (int i = 0; i < m; i++) {
