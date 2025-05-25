@@ -10,5 +10,5 @@ int main() {
 	rs = s;
 	reverse(s.begin(), s.end());
 
-	rs == s ? cout << 1 : cout << 0;
+	cout << (rs == s ? 1 : 0);
 }
