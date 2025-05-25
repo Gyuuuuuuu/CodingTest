@@ -1,18 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main() {
-	long long startN, endN;
-	cin >> startN >> endN;
-	if (startN > endN) {
-		swap(startN, endN);
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
+	long long a, b;//b가 아무튼 더 큼
+	cin >> a >> b;
+
+	if (a > b)swap(a, b);
+	if (b - a == 1 || b - a == 0) {
+		cout << 0;
 	}
-	if (endN - startN - 1 == -1) {
-		cout << 0 << "\n";
-	} else {
-	cout << endN - startN -1 << "\n";
-	}
+	else {
+		cout << b - a - 1 << "\n";
 	
-	for (int i = startN+1; i < endN; i++) {
-		cout << i << " ";
-	}	
+		for (long long i = a+1; i < b; i++) {
+			cout << i << ' ';
+		}
+	}
 }
