@@ -1,20 +1,21 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main() {
-	string s;
-	cin >> s;
-	int cnt = s.length();
+    string s;
+    cin >> s;
+    int dial = 0;
 
-	for (char c : s) {
-		if (c == 'A' || c == 'B' || c == 'C') cnt += 2;
-		if (c == 'D' || c == 'F' || c == 'E') cnt += 3;
-		if (c == 'H' || c == 'I' || c == 'G') cnt += 4;
-		if (c == 'K' || c == 'L' || c == 'J') cnt += 5;
-		if (c == 'N' || c == 'O' || c == 'M') cnt += 6;
-		if (c == 'Q' || c == 'R' || c == 'P' || c=='S') cnt += 7;
-		if (c == 'T' || c == 'U' || c == 'V') cnt += 8;
-		if (c == 'X' || c == 'Y' || c == 'Z' || c=='W') cnt += 9;
-	}
-	cout << cnt;
+    for (char ch : s) {
+        if (ch <= 'C') dial += 3;
+        else if (ch <= 'F') dial += 4;
+        else if (ch <= 'I') dial += 5;
+        else if (ch <= 'L') dial += 6;
+        else if (ch <= 'O') dial += 7;
+        else if (ch <= 'S') dial += 8;
+        else if (ch <= 'V') dial += 9;
+        else dial += 10;
+    }
+
+    cout << dial << '\n';
 }
