@@ -11,13 +11,13 @@ int main() {
 	int cnt = s.length();
 
 	for (int i = 0; i < s.length(); i++) {
-		if (i < s.length() - 2 && s.length() >= 3) {
+		if (i < s.length() - 2) {
 			if (s[i] == 'd' && s[i + 1] == 'z' && s[i + 2] == '=') {
 				cnt -= 2;
 				i += 2;
 			}
 		}
-		if (i < s.length() - 1 && s.length() >=2) {
+		if (i < s.length() - 1) {
 			if (s[i] == 'c' && s[i + 1] == '=' ||
 				s[i] == 'c' && s[i + 1] == '-' ||
 				s[i] == 'd' && s[i + 1] == '-' ||
